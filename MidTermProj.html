@@ -1,0 +1,269 @@
+﻿<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Postcard Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:300,400|Oswald:700">
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Merienda+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/main2.css">
+	<link rel="stylesheet" href="css/main1.css">
+	<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+
+<div class="content-wrapper">
+		<img src="img/logFlo1.png" class="logo" alt="Flower Logo">
+		<nav>
+			<ul>
+				<li><a href="#floty">Flowers Type</a></li>
+				<li><a href="#postcard">Postcards</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="hero">
+	<h1>Flowers and Emotions</h1>
+	<p>The positive effect of flowers on emotions.</p>
+</div>
+
+<main role="main">
+	<div class="content-wrapper">
+		<p id="press-quote"></p>		
+<p>Scientific studies corroborate that receiving flowers causes an involuntary smile known as Duchenne, which is nothing more than a response produced by a genuine emotion. In addition, as this report also indicates, sharing the space with flowers creates a comfortable and pleasant environment that provokes positive emotional feelings. In a hospital it relieves the pain of the sick, in professional offices and schools neutralizes stress, and women find a man more attractive if a bouquet of flowers decorates the room in which he is. Many reasons to add so you do not forget to give flowers, more information <a href="#contact">contact&nbsp;us</a>.</p>
+		<h2>Teraphy History</h2>
+		<figure>
+			<img src="img/william-dozer@2x.png" alt="William Dozer">
+			<figcaption>Flowers Affect People's Moods</figcaption>
+		</figure>
+		<p>Therapy with Flowers is the result of a tradition maintained since antiquity, of the use of plants to cure Man, in a much more global concept, both of the patient and of the flower itself. Its origins lie in the alchemical tradition in which each living being has an energetic aspect, another chemical and a spiritual one.
+
+floral therapy
+
+Its creation is due to the fact that it was due to the Egyptian priests, then moved to Greece, then to Alexandria and from there Al-Andalus, later refugee in the monasteries like El Escorial, to hide from the Inquisition itself
+
+It is the eternal opposition or eternal struggle between an official medicine, established by the instances that hold the power in each historical moment, and a medicine that works its way in a parallel way and that does not accept that everything is reduced to the physical, but in some way maintains that diseases have a physical cause, but also emotional.</p>
+	</div>
+</main>
+
+<div class="outer-wrapper">
+	<header class="clearfix">
+		<h1><a name=floty>Flowers Type</a></h1>
+		<select id="state-list">
+			<option value="usa">Choose a Flowers</option>
+			<option value="su">Sunflowers</option>
+			<option value="ro">Roses</option>
+			<option value="hd">Hydrangeas</option>
+			<option value="tu">Tulips</option>
+			<option value="da">Dahlias</option>
+			<option value="lil">Lilies</option>
+			<option value="car">Carnation</option>
+			<option value="daf">Daffodil</option>
+			<option value="ch">Cherry Blossoms</option>
+			
+		</select>
+	</header>
+
+	<div class="main clearfix">
+		<div class="img-holder">
+			<div>
+				<img id="info-pic" src="img1/usa.jpg" alt="Flower" width="260" height="200">
+				<p id="info-name">Flowers</p>
+			</div>
+		</div>
+		<div class="info-holder">
+			<p><strong>Scientific Name: </strong><span id="info-scient">fl</span></p>
+			<p><strong>Common Name: </strong><span id="info-common">flower</span></p>
+			<p><strong>Height: </strong><span id="info-height">2-6 mt</span></p>
+			<p><strong>Significance: </strong><span id="info-significance">beautiful enviroment </span></p>
+			
+			
+		</div>
+	</div>
+</div>
+<div class="outer-wrapper">
+	<div class="content-wrapper">
+		<header>
+			<h1><a name=postcard>Send a Postcard</a></h1>			<p class="subtitle">Generate Postcards of most beautiful fowers</p>
+		</header>
+		<main role="main">
+			<div class="first step">
+				<h2>1. Choose a Flores</h2>
+				<select name="states" id="states">
+					<option selected disabled value="empty-state">Flores</option>
+					
+			<option value="su">Sunflowers</option>
+			<option value="ro">Roses</option>
+			<option value="hd">Hydrangeas</option>
+			<option value="tu">Tulips</option>
+			<option value="da">Dahlias</option>
+			<option value="lil">Lilies</option>
+			<option value="car">Carnation</option>
+			<option value="daf">Daffodil</option>
+			<option value="ch">Cherry Blossoms</option>
+			
+					
+				</select>
+			</div>
+			<div class="second step">
+				<h2>2. Enjoy Your Postcard!</h2>
+				<div id="postcard">
+					<p id="greeting">To Generate a Postcard</p>
+					<p id="state-heading">Choose a state</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<script src="js/state-data1.js"></script>
+<script>
+	document.getElementById('state-list').onchange = function() {
+		var selected = this.value;
+		document.getElementById('info-pic').src= 'img1/'+selected+'.jpg';
+		document.getElementById('info-name').textContent = stateData[this.value].name;
+		document.getElementById('info-scient').textContent = stateData[this.value].scient;
+		document.getElementById('info-common').textContent = stateData[this.value].common;
+		document.getElementById('info-height').textContent = stateData[this.value].height;
+		document.getElementById('info-significance').textContent = stateData[this.value].significance;
+		
+	};
+</script>
+<footer>
+	
+</footer>
+
+<script>
+	var quotesArray = [
+'Flowers can affect our daily life in the best way.- Society of American Florists and the Flower Promotion Organization. - Ceci',
+	'Surrounding with flowers is highly recommended for health. - State University of New Jersey',
+	'Receiving flowers produces a universal and immediate happiness that does not cause other gifts. - Washington University.',
+	'The flowers influence the mood of the people and that depending on the circumstance like a bouquet of flowers has an effect beneficial in the behavior of human beings. - Holland University of Wageningen'];
+	var randomNumber = Math.floor(Math.random() * quotesArray.length);
+		document.getElementById('press-quote').textContent = '“' + quotesArray[randomNumber].split(' - ')[0] + '” - ' + quotesArray[randomNumber].split(' - ')[1];
+	</script><div class="container">
+	<h1><a name=contact>Contact Us</a></h1>	<p>Thank you so much for your interest.</p>
+
+<p>Our Location: Flowers N Emotions  - Shop No. 2,  Garden City , Long Island NY</p>
+<p>Telephone: (718)548-2545</p>
+
+<script>
+
+
+
+function Validator() {
+    var v;
+
+		v = document.getElementById("first-name").value;
+
+		if (!isNaN(v) ) {
+				alert("Input not valid, enter your name! ");
+		return;	}
+		v = document.getElementById("last-name").value;
+
+		if (!isNaN(v) ) {
+				alert("Input not valid, enter your name! ");
+			}
+
+
+			v = document.getElementById("last-name").value;
+
+			if (!isNaN(v) ) {
+					alert("Enter your lastname! ");
+				}
+
+
+			// Get the value of the input field with id="numb"
+			v = document.getElementById("phone").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if ( v.length != 10) {
+        alert("Input not valid - need 10 numbers for phone");
+      }
+		/*	console.log("inside myPhone"); */
+
+		// Get the value of the input field with id="numb"
+
+
+}
+
+ </script>
+
+
+
+	<div class="form-container">
+		<div class="nuevo">
+  <p>
+<form>
+
+    <fieldset>
+      <legend>Title<abbr title="This field is mandatory">*</abbr></legend>
+    <left>  
+<input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Mr.</label>
+      
+<input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Ms.</label>
+  </left>
+ </fieldset>
+
+  </p>
+  <p>
+    <label for="n1">How old are you?</label>
+    <!-- The pattern attribute can act as a fallback for browsers which
+         don't implement the number input type but support the pattern attribute.
+         Please note that browsers that support the pattern attribute will make it
+         fail silently when used with a number field.
+         Its usage here acts only as a fallback -->
+    <input type="number" min="18" max="120" step="1" id="n1" name="age"
+           pattern="\d+">
+  </p>
+  <p>
+    <label for="t1">What's your favorite flower?<abbr title="This field is mandatory">*</abbr></label>
+    <input type="text" id="t1" name="flower" list="l1" required
+           pattern="[Ss]unFlower|[Rr]oses|[Tt]ulips|[Ll]ilium|[Dd]ahlia|[Cc]arnation">
+    <datalist id="l1">
+      <option>SunFlower</option>
+      <option>Roses</option>
+      <option>Tulips</option>
+      <option>Lilium</option>
+      <option>Dahlia</option>
+      <option>Carnation</option>
+    </datalist>
+  </p>
+  <p>
+    <label for="t2">What's your e-mail?<abbr title="This field is mandatory">*</abbr></label>
+    <input type="email" id="t2" name="email" required>
+  </p>
+  <p>
+    <label for="t3">Leave a short message</label>
+    <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+  </p>
+  <p>
+    <button>Submit</button>
+  </p>
+</form>
+	</div>
+</div>
+<footer>
+	<p>Made by Ana Leandro <br>Copyright © Postcard Generator</p>
+</footer>
+
+<script>
+	var states = document.getElementById('states');
+
+	states.onchange = function() {
+		// console.log('state index: ' + states.selectedIndex);
+		// console.log('state name: ' + states.options[states.selectedIndex].text);
+		// console.log('img/' + states.value + '@2x.jpg');
+		document.getElementById('postcard').style.backgroundImage = 'url(img/' + states.value + '@2x.jpg)';
+		document.getElementById('greeting').innerHTML = 'Greetings from';
+		document.getElementById('state-heading').innerHTML = states.options[states.selectedIndex].text;
+	}
+</script>
+
+</body>
+</html>
